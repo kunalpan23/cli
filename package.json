@@ -14,6 +14,7 @@
         "document",
         "docs"
     ],
+    "preferGlobal": true,
     "author": "Samrith Shankar",
     "license": "MIT",
     "bugs": {
@@ -23,6 +24,7 @@
     "devDependencies": {
         "babel-eslint": "^10.0.1",
         "chalk": "^2.4.2",
+        "cli-step": "^1.0.2",
         "eslint": "^5.16.0",
         "eslint-config-prettier": "^4.1.0",
         "eslint-plugin-import": "^2.17.2",
