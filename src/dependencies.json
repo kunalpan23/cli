@@ -1,0 +1,14 @@
+{
+    "devDependencies": [
+        "@babel/core",
+        "@babel/preset-env",
+        "autoprefixer",
+        "babel-eslint",
+        "eslint",
+        "eslint-config-prettier",
+        "eslint-plugin-prettier",
+        "eslint-plugin-import",
+        "parcel-bundler",
+        "prettier"
+    ]
+}
