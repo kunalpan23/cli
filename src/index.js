@@ -2,12 +2,14 @@ const argv = require('minimist')(process.argv.slice(2));
 const chalk = require('chalk');
 const clear = require('clear');
 
-global.NAME = argv._[0];
+global.FOLDER = argv._[0];
 
-if (!global.NAME) {
+if (!global.FOLDER) {
     require('./menu')();
     process.exit(1);
 }
+
+global.NAME = global.FOLDER.split('/').pop();
 
 (async function() {
     clear();
@@ -20,6 +22,7 @@ if (!global.NAME) {
     );
     await require('./steps')();
     console.log(
+        '\n',
         '',
         '',
         chalk.cyan.bold('Markeroo -'),
