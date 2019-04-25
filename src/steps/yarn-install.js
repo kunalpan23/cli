@@ -5,7 +5,6 @@ module.exports = function(STEP) {
 
     return new Promise(resolve => {
         const { devDependencies } = require('../dependencies.json');
-        process.chdir(`./${global.NAME}`);
         exec(`yarn add --dev ${devDependencies.join(' ')}`, err => {
             if (err) {
                 STEP.error();
