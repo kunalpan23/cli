@@ -48,6 +48,13 @@ global.NAME = NAME;
         '',
         '',
         chalk.cyan.bold('Markeroo -'),
-        chalk.green.bold('Successfully created project', global.NAME, '\n')
+        chalk.green.bold('Successfully created project', global.NAME)
+    );
+    console.log(
+        '',
+        '',
+        '',
+        chalk.gray.bold('Project path:', require('path').resolve('.')),
+        '\n'
     );
 })();
