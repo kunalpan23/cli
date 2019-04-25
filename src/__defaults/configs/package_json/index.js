@@ -1,5 +1,5 @@
 module.exports = () => ({
-    name: global.name,
+    name: global.NAME,
     dependencies: {},
     devDependencies: {}
 });
