@@ -1,7 +1,7 @@
 {
-    "name": "markeroo-cli",
+    "name": "markeroo",
     "version": "1.0.0",
-    "description": "The CLI tool for Markeroo",
+    "description": "A simple document creator using Markdown.",
     "bin": {
         "markeroo": "bin/markeroo"
     },
