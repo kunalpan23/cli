@@ -2,14 +2,36 @@ const argv = require('minimist')(process.argv.slice(2));
 const chalk = require('chalk');
 const clear = require('clear');
 
-global.FOLDER = argv._[0];
+const { isValidName } = require('./utils');
 
-if (!global.FOLDER) {
+const NAME = argv._[0];
+
+if (!NAME) {
     require('./menu')();
     process.exit(1);
 }
 
-global.NAME = global.FOLDER.split('/').pop();
+if (!isValidName(NAME)) {
+    console.log('');
+    console.log(
+        chalk.red.bold(
+            '',
+            '',
+            chalk.cyan.bold('Markeroo -'),
+            `The name ${NAME} is not valid.`
+        )
+    );
+    console.log(
+        chalk.gray.bold(
+            '',
+            '',
+            'Project name can only contain alpha-numeric characters, dashes and underscores.\n'
+        )
+    );
+    process.exit(1);
+}
+
+global.NAME = NAME;
 
 (async function() {
     clear();
